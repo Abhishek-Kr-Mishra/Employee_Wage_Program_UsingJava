@@ -11,27 +11,29 @@ public class EmployeeWageCalculation {
 		int WAGE_PER_HOUR=20;
 		int workHour=0;
 		int perDaySalary=0;
-		int isPresent=1;
-		int isFullTime=1;
 		
 		Random random = new Random();
-		int randomValue=random.nextInt(2);
+		int randomValue=random.nextInt(3)+1;
 		
-		if(randomValue==isPresent) {
-			int fullOrPart=random.nextInt(2);
-			if(fullOrPart==isFullTime) {
-				System.out.println("Employee is Present and Full Time ");
-				workHour=8;
-			}
-			else {
-				System.out.println("Employee is Present and Part Time");
-				workHour=4;
-			}
-		}
-		else {
-			System.out.println("Employee is Absent");
-		}
+		switch(randomValue) {
+		case 1:
+			System.out.println("Employee is Full Time");
+			workHour=8;
+			break;
+			
+		case 2:
+			System.out.println("Employee is Part Time");
+			workHour=4;
+			break;
 		
+		case 3:
+			System.out.println("Employee is absent");
+			break;
+			
+		default:
+			System.out.println("Invalid Case");
+		}
+
 		perDaySalary=WAGE_PER_HOUR*workHour;
 		System.out.println("Salary= "+perDaySalary);
 		
