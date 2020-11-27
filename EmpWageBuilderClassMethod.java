@@ -5,9 +5,24 @@ public class EmpWageBuilderClassMethod {
 	public static final int IS_FULL_TIME=1;
 	public static final int IS_PART_TIME=2;
 	
-	public static int computeEmpWage(String company, int wagePerHour, int maxWorkingDayInMonth, int maxHourInMonth )
+	private final String company;
+	private final int wagePerHour;
+	private final int maxWorkingDayInMonth;
+	private final int maxHourInMonth;
+	private int totalWage;
+	
+	
+	public EmpWageBuilderClassMethod(String company, int wagePerHour, int maxWorkingDayInMonth, int maxHourInMonth ) {
+			super();
+			this.company=company;
+			this.wagePerHour=wagePerHour;
+			this.maxWorkingDayInMonth=maxWorkingDayInMonth;
+			this.maxHourInMonth=maxHourInMonth;
+	}
+	
+	public void computeEmpWage()
 	{
-		int workHour=0,totalWorkingHours=0, totalWorkingDays=0, totalWage=0;
+		int workHour=0,totalWorkingHours=0, totalWorkingDays=0;
 		
 		while(totalWorkingHours<maxHourInMonth && totalWorkingDays<maxWorkingDayInMonth) {
 			
@@ -33,8 +48,11 @@ public class EmpWageBuilderClassMethod {
 		}
 		
 		totalWage=totalWorkingHours*wagePerHour;
-		System.out.println("Total Employee Wage for Company "+company+"is: "+totalWage);
-		return totalWage;
+	}
+	
+	@Override
+	public String toString() {
+		return "Total Employee Wage for Company "+ company +"is: "+ totalWage ;
 	}
 	
 }
