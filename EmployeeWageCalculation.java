@@ -8,15 +8,10 @@ public class EmployeeWageCalculation {
 		
 		System.out.println("!!!!!!!!!! Welcome to Employee Wage Program !!!!!!!!!!");
 		
-		EmpWageBuilderClassMethod DMart = new EmpWageBuilderClassMethod("D-Mart",20,10,80);
-		EmpWageBuilderClassMethod BigBazar = new EmpWageBuilderClassMethod("Big Bazar",25,20,100);
-		
-		System.out.println("D-Mart");
-		DMart.computeEmpWage();
-		
-		System.out.println("Big Bazar");
-		BigBazar.computeEmpWage();
-		
+		EmpWageBuilderClassMethod empWageBuilderClass=new EmpWageBuilderClassMethod();
+		empWageBuilderClass.addCompanyEmpWage("Dmart", 20, 20, 150);
+		empWageBuilderClass.addCompanyEmpWage("Reliance", 10, 4, 20);
+		empWageBuilderClass.computeEmpWage();
 		
 	}
 		
