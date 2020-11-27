@@ -8,8 +8,8 @@ public class EmployeeWageCalculation {
 		
 		System.out.println("!!!!!!!!!! Welcome to Employee Wage Program !!!!!!!!!!");
 		
-		int totalSlary= EmpWageBuilderClassMethod.computeEmpWage();
-		System.out.println("Total Salary is: "+totalSlary);
+		EmpWageBuilderClassMethod.computeEmpWage("D-Mart, ", 20, 2, 10);
+		EmpWageBuilderClassMethod.computeEmpWage("Big Bazar", 15, 20, 100);
 		
 	}
 		
